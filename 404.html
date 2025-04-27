@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .error-message {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #7f8c8d;
+        }
+
+        .home-button {
+            text-decoration: none;
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="error-code">404</h1>
+        <p class="error-message">Oops! The page you're looking for doesn't exist.</p>
+        <a href="/" class="home-button">Go Back to Home</a>
+    </div>
+
+    <script>
+        // Redirect to home after 10 seconds
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 10000);
+    </script>
+</body>
+</html>
