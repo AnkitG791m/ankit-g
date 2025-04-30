@@ -1,73 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 - Page Not Found</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+  <!-- ======= Internal CSS ======= -->
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .container {
-            text-align: center;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .error-code {
-            font-size: 120px;
-            font-weight: bold;
-            color: #e74c3c;
-        }
+    /* ======= Header ======= */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #0f0f0f;
+      box-shadow: 0 0 20px #00ffe0;
+    }
 
-        .error-message {
-            font-size: 18px;
-            margin: 20px 0;
-            color: #7f8c8d;
-        }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00ffe0;
+      text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+    }
 
-        .home-button {
-            text-decoration: none;
-            background-color: #3498db;
-            color: #fff;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
 
-        .home-button:hover {
-            background-color: #2980b9;
-        }
-    </style>
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    .navbar ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #00ffe0;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transition: 0.4s;
+    }
+
+    .navbar ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* ======= 404 Error Section ======= */
+    .error-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .error-title {
+      font-size: 10rem;
+      color: #00ffe0;
+      text-shadow: 0 0 20px #00ffe0, 0 0 40px #00ffe0, 0 0 60px #00ffe0;
+      margin-bottom: 20px;
+    }
+
+    .error-message {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .btn-neon {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      color: #00ffe0;
+      border: 2px solid #00ffe0;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-neon:hover {
+      background: #00ffe0;
+      color: #0a0a0a;
+      box-shadow: 0 0 20px #00ffe0, 0 0 40px #00ffe0, 0 0 60px #00ffe0;
+    }
+
+    /* ======= Footer ======= */
+    .footer {
+      background: #0f0f0f;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 0 20px #00ffe0 inset;
+    }
+
+    .footer-content p {
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+
 </head>
 <body>
-    <div class="container">
-        <h1 class="error-code">404</h1>
-        <p class="error-message">Oops! The page you're looking for doesn't exist.</p>
-        <a href="https://ankitg791m.github.io/ankit-g/" class="home-button">Go Back to Home</a>
-    </div>
 
-    <script>
-        // Redirect to home after 10 seconds
-        setTimeout(function() {
-            window.location.href = '/';
-        }, 10000);
-    </script>
+  <!-- ======= Header ======= -->
+  <header class="header">
+    <div class="logo">MyPortfolio</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======= 404 Error Section ======= -->
+  <section class="error-section">
+    <h1 class="error-title">404</h1>
+    <p class="error-message">Oops! The page you are looking for does not exist.</p>
+    <a href="index.html" class="btn-neon">Back to Home</a>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 MyPortfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
